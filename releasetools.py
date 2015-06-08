@@ -49,4 +49,3 @@ def AddBasebandAssertion(info, input_zip):
       cmd = 'assert(run_program("/tmp/test_radio_version.sh"' + ''.join([', "%s"' % b for b in basebands]) + ") == 0);"
       info.script.script.append(info.script._WordWrap(cmd))
     info.metadata["pre-baseband"] = m.group(1)
-
